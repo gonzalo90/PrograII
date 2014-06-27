@@ -59,7 +59,7 @@ int eliminarCoincidentes(char* c1, char* c2)
                 pe2++;
             }
         }
-        while(*pl1 && !*pl2)
+        while(*pl1 && !*pl2) /* Una vez que se termina una cadena, debo terminar de recorrer la otra */
         {
             *pe1 = *pl1;
             pl1++;
