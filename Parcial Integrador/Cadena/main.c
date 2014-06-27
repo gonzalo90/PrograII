@@ -5,37 +5,40 @@
 #define TAM2 30
 
 /*
-1.   Confeccionar una función: Que reciba 2 cadenas, y elimine los caracteres coincidentes de ambas.
-La función debe retornar la cantidad de caracteres coincidentes. Utilizar aritmética de punteros. Confeccione un main que invoque a la función desarrollada.
+1.   Confeccionar una funciï¿½n: Que reciba 2 cadenas, y elimine los caracteres coincidentes de ambas.
+La funciï¿½n debe retornar la cantidad de caracteres coincidentes. Utilizar aritmï¿½tica de punteros. Confeccione un main que invoque a la funciï¿½n desarrollada.
    EJEMPLO:
  Cadena1: La casa de Pedro es grande. -->
- Cadena2: María lava la ropa.         -->
+ Cadena2: Marï¿½a lava la ropa.         -->
 Hay 5 caracteres coincidentes
 Cadena1: L csa dePed es grande.
 Cadena2: Mri lavala pa.*/
 
 
-void eliminarCoincidentes(char*, char*);
+int eliminarCoincidentes(char*, char*);
 
 int main()
 {
     char cad1[TAM1];
     char cad2[TAM2];
+    int catnC = 0;
     printf("Ingrese Cadena1: ");
     gets(cad1);
     printf("Ingrese Cadena2: ");
     gets(cad2);
-    eliminarCoincidentes(cad1, cad2);
+    cantC = eliminarCoincidentes(cad1, cad2);
+    printf("Cantidad de Coincidentes: %d\n", cantC);
     printf("%s\n%s", cad1, cad2);
     return 0;
 }
 
-void eliminarCoincidentes(char* c1, char* c2)
+int eliminarCoincidentes(char* c1, char* c2)
 {
     char *pl1 = c1,
          *pe1 = c1,
          *pl2 = c2,
          *pe2 = c2;
+    int cont;
     if(*pl1 && *pl2)
     {
         while(*pl1 && *pl2)
@@ -44,6 +47,7 @@ void eliminarCoincidentes(char* c1, char* c2)
             {
                 pl1++;
                 pl2++;
+                cont++;
             }
             else
             {
@@ -70,6 +74,6 @@ void eliminarCoincidentes(char* c1, char* c2)
         *pe1 = '\0';
         *pe2 = '\0';
     }
-    return;
+    return cont;
 }
 
