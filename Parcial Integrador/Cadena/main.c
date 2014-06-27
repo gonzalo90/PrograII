@@ -21,7 +21,7 @@ int main()
 {
     char cad1[TAM1];
     char cad2[TAM2];
-    int catnC = 0;
+    int cantC = 0;
     printf("Ingrese Cadena1: ");
     gets(cad1);
     printf("Ingrese Cadena2: ");
@@ -38,7 +38,7 @@ int eliminarCoincidentes(char* c1, char* c2)
          *pe1 = c1,
          *pl2 = c2,
          *pe2 = c2;
-    int cont;
+    int cont = 0;
     if(*pl1 && *pl2)
     {
         while(*pl1 && *pl2)
