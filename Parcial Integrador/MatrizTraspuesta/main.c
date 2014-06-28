@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define COL 5
+#define COL 3
 #define FIL 3
 
-/*Crear un programa y la o las funciones necesarias para trasponer sobre sí misma una matriz cuadrada.*/
+/*Crear un programa y la o las funciones necesarias para trasponer sobre sï¿½ misma una matriz cuadrada.*/
 
 void trasponerMat(int m[][COL]);
 
@@ -13,7 +13,7 @@ void mostrarMat(int m[][COL]);
 int main()
 {
     int i, j;
-    int m[][COL] = {{1,2,3,4,5},{5,6,7,8,9},{9,1,2,3,4}};
+    int m[][COL] = {{1,2,3},{5,6,7},{9,1,2}};
     printf("Matriz:\n");
     for(i = 0; i < FIL; i++)
     {
@@ -21,9 +21,13 @@ int main()
             printf("%d", m[i][j]);
         printf("\n");
     }
-    trasponerMat(m);
-    mostrarMat(m);
-    return 0;
+    if(FIL == COL)
+    {
+        trasponerMat(m);
+        mostrarMat(m);
+    }
+    else
+        printf("\nNo es una Matriz cuadrada");
 }
 
 
