@@ -15,15 +15,11 @@ int main()
     int i, j;
     int m[][COL] = {{1,2,3},{5,6,7},{9,1,2}};
     printf("Matriz:\n");
-    for(i = 0; i < FIL; i++)
-    {
-        for(j = 0; j < COL; j++)
-            printf("%d", m[i][j]);
-        printf("\n");
-    }
+    mostrarMat(m);
     if(FIL == COL)
     {
         trasponerMat(m);
+        printf("\nMatriz Traspuesta:\n");
         mostrarMat(m);
     }
     else
