@@ -28,6 +28,7 @@ int main()
     }
     else
         printf("\nNo es una Matriz cuadrada");
+    return 0;
 }
 
 
